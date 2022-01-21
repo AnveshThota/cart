@@ -1,0 +1,14 @@
+<div class="form1" style="text-align:center;">
+
+<form [formGroup]="userProfileForm"  (ngSubmit)="onSubmit()">
+    <h1 style="text-align: center;">Login</h1>
+    
+      <input type="text" placeholder="username" class="form-control" formControlName="username"><br/>
+      <input type="text" placeholder="password" class="form-control" formControlName="password"><br/>
+    <button type="submit" class="btn btn-primary" [disabled]="!userProfileForm.valid" >Login</button>
+    <p>Dont have an account?</p>
+      <button  class="btn btn-primary" routerLink="/Register" routerLinkActive="active">Register</button>
+    
+  </form>
+
+</div>

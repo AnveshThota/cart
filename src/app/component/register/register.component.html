@@ -1,0 +1,37 @@
+<!-- 
+<div class="form1">
+<form [formGroup]="registerProfileForm"  (ngSubmit)="onSubmit()">
+    <h1 style="text-align: center;">Registration</h1>
+    <input type="text" placeholder="firstname" class="form-control" formControlName="firstname"><br/>
+    <input type="text" placeholder="lastname" class="form-control" formControlName="lastname"><br/>
+      <input type="text" placeholder="email" class="form-control" formControlName="email"><br/>
+      <input type="text" placeholder="password" class="form-control" formControlName="password"><br/>
+      <input type="text" placeholder="confirm password" class="form-control"  formControlName=" cpassword"><br/>
+    <button type="submit" class="btn btn-primary" >Save</button>
+    <div style="text-align: center">
+       If you have an account please login
+    </div>
+    <button  class="btn btn-primary" routerLink="/login" routerLinkActive="active">Login</button>
+
+    
+</form>
+
+</div> -->
+
+
+
+<div class="form1">
+<form [formGroup]="registerProfileForm"  (ngSubmit)="onSubmit()">
+  <h1 style="text-align: center;">Registration</h1>
+<input type="text" placeholder="firstname" class="form-control" formControlName="firstname"><br/>
+<input type="text" placeholder="lastname" class="form-control" formControlName="lastname"><br/>
+<input type="text" placeholder="email" class="form-control" formControlName="email"><br/>
+<input type="text" placeholder="password" class="form-control" formControlName="password"><br/>
+<input type="text" placeholder="confirm password" class="form-control" formControlName="cpassword"><br/>
+
+<button type="submit" class="btn btn-primary" [disabled]="!registerProfileForm.valid" >Save</button>
+<div>
+<p>If you have an account!! please  <button  class="btn btn-primary" routerLink="../login" routerLinkActive="active">Login</button></p>
+</div>
+</form>
+</div>

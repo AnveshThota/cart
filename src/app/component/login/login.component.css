@@ -1,0 +1,20 @@
+
+
+  .form1{
+
+    display: block;
+    /* float: right; */
+    /* box-sizing: border-box;
+    width: 50%;
+    
+    height: 2px;
+     padding: 50px 50px;  */
+     /* margin: -850px -25px; */
+
+     margin: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+    } 

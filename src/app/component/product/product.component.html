@@ -1,0 +1,71 @@
+<!-- <div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+            <a>
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100">
+                <h6>Home</h6>
+                 </a>
+        </div>
+        <div class="item">
+             <a>
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100">
+                <h6>Mobiles</h6>
+            </a>
+            
+        </div>
+        <div class="item">
+            <a>
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100">
+                <h6>Books</h6>
+                 </a>
+            
+        </div>
+        <div class="item">
+            <a>
+                <img src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100">
+                <h6>Pantry</h6>
+            </a>
+            
+        </div>
+        
+       
+
+    </div>
+</div> -->
+
+<button class="btn btn-danger" style="float:right;margin-right: 10px;" (click)="logout()" type="submit" routerLink="/login">Logout</button>
+
+<div>
+welcome {{first}}
+</div>
+
+<div class="container">
+    <div class="row">
+
+        <ng-container *ngFor="let item of productList">
+             <div class="card col-md-3">
+                 <img src="{{item.image}}">
+                 <h5 style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100ch;">{{item.title}}</h5>
+                <p style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100ch;">{{item.description}}</p>
+                <p><strong>Price</strong> ${{item.price}}</p>
+
+                <!-- <div *ngIf="product.length==0">
+                </div> -->
+                
+                <div>
+                    <button style="float: left;" class="btn btn-primary" (click)="addToCart(item)">Add to cart</button>
+                    <!-- <button style="float: right;" (click)="addToWish(item)">wish list<i style="color:red;font-size:30px" [ngClass]="[k ? class : classh]"></i> -->
+                        <button style="float: right;" (click)="addToWish(item)">wish list<i style="color:red;font-size:30px" class="fas fa-heart"></i></button>
+
+                    <!-- <button style="float: right;" (click)="addToWish(item)">wish list<i style="color:red;font-size:30px" [ngClass]="[k ? 'class' : 'classh']"></i> -->
+                        <!-- style="color:red;font-size:30px" -->
+                    
+                </div>
+                <!-- <i class="fa-solid fa-heart"></i> -->
+                <!-- <i style="color:red;font-size:40px" class="fas fa-heart"></i>
+                <i class="fa-solid fa-face-grin-hearts">1</i> -->
+                <!-- <i style="font-size: 40px;" class="fa-solid fa-square-heart">1</i> -->
+            </div>
+        </ng-container>
+    </div>
+</div>
